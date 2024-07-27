@@ -1,0 +1,100 @@
+/* estilos banner redes */
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: perspective(31.25rem) rotateY(0deg);
+            transform: perspective(31.25rem) rotateY(0deg);
+  }
+  25% {
+    -webkit-transform: perspective(31.25rem) rotateY(50deg) rotateX(20deg);
+            transform: perspective(31.25rem) rotateY(50deg) rotateX(20deg);
+  }
+  50% {
+    -webkit-transform: perspective(31.25rem) rotateY(180deg);
+            transform: perspective(31.25rem) rotateY(180deg);
+  }
+  75% {
+    -webkit-transform: perspective(31.25rem) rotateY(-50deg) rotateX(-20deg);
+            transform: perspective(31.25rem) rotateY(-50deg) rotateX(-20deg);
+  }
+  100% {
+    -webkit-transform: perspective(31.25rem) rotateY(0deg);
+            transform: perspective(31.25rem) rotateY(0deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    -webkit-transform: perspective(31.25rem) rotateY(0deg);
+            transform: perspective(31.25rem) rotateY(0deg);
+  }
+  25% {
+    -webkit-transform: perspective(31.25rem) rotateY(50deg) rotateX(20deg);
+            transform: perspective(31.25rem) rotateY(50deg) rotateX(20deg);
+  }
+  50% {
+    -webkit-transform: perspective(31.25rem) rotateY(180deg);
+            transform: perspective(31.25rem) rotateY(180deg);
+  }
+  75% {
+    -webkit-transform: perspective(31.25rem) rotateY(-50deg) rotateX(-20deg);
+            transform: perspective(31.25rem) rotateY(-50deg) rotateX(-20deg);
+  }
+  100% {
+    -webkit-transform: perspective(31.25rem) rotateY(0deg);
+            transform: perspective(31.25rem) rotateY(0deg);
+  }
+}
+.banner__redes {
+  background-image: linear-gradient(-225deg, #180161 0%, #4F1787 29%, #A0153E 67%, #FFF800 100%);
+  color: #fff;
+  padding: 2.5rem;
+  text-align: center;
+}
+
+.banner__redes-container {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.banner__redes-title {
+  font-size: 32px;
+  margin-bottom: 1.25rem;
+  color: #f0f8ff;
+  line-height: 1;
+}
+
+.banner__redes-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1.25rem;
+}
+
+.banner__redes-link {
+  display: inline-block;
+  font-size: 1.5rem;
+  -webkit-transition: -webkit-transform 0.3s ease, -webkit-filter 0.3s ease;
+  transition: -webkit-transform 0.3s ease, -webkit-filter 0.3s ease;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  transition: transform 0.3s ease, filter 0.3s ease, -webkit-transform 0.3s ease, -webkit-filter 0.3s ease;
+}
+
+.banner__redes-link .banner__redes-icon {
+  -webkit-animation: rotate 5s infinite;
+          animation: rotate 5s infinite;
+}
+
+.banner__redes-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  -webkit-transition: -webkit-transform 0.3s ease, -webkit-filter 0.3s ease;
+  transition: -webkit-transform 0.3s ease, -webkit-filter 0.3s ease;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  transition: transform 0.3s ease, filter 0.3s ease, -webkit-transform 0.3s ease, -webkit-filter 0.3s ease;
+}
