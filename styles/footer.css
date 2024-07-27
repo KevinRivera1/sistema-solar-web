@@ -1,0 +1,21 @@
+.footer {
+  background-color: #16161a;
+  color: #fffffe;
+  padding: 1rem;
+  text-align: center;
+  border-top: .0625rem solid #34495e;
+}
+
+.footer__container {
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+.footer__text {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.footer__name {
+  font-weight: bold;
+}
