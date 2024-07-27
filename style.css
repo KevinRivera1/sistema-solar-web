@@ -1,0 +1,633 @@
+@charset "UTF-8";
+
+.header {
+  background-color: #333;
+  color           : white;
+  padding         : 1rem 0;
+  position        : sticky;
+  top             : 0;
+  z-index         : 2;
+}
+
+.header__container {
+  display          : -webkit-box;
+  display          : -ms-flexbox;
+  display          : flex;
+  -webkit-box-pack : justify;
+  -ms-flex-pack    : justify;
+  justify-content  : space-between;
+  -webkit-box-align: center;
+  -ms-flex-align   : center;
+  align-items      : center;
+  max-width        : 75rem;
+  margin           : 0 auto;
+  padding          : 0 1rem;
+}
+
+@media (max-width: 768px) {
+  .header__container {
+    -webkit-box-align: center;
+    -ms-flex-align   : center;
+    align-items      : center;
+  }
+}
+
+.header__menu-btn {
+  font-size : 1.5rem;
+  background: none;
+  border    : none;
+  color     : white;
+  cursor    : pointer;
+  z-index   : 3;
+}
+
+.header__logo {
+  -ms-flex-negative: 0;
+  flex-shrink      : 0;
+}
+
+.header__logo-link {
+  display: inline-block;
+}
+
+.header__logo-image {
+  max-height: 3.125rem;
+}
+
+.header__nav {
+  position             : relative;
+  display              : none;
+  -webkit-box-orient   : vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction   : column;
+  flex-direction       : column;
+  -webkit-box-align    : center;
+  -ms-flex-align       : center;
+  align-items          : center;
+  width                : 95%;
+}
+
+.header__nav-list {
+  list-style      : none;
+  display         : -webkit-box;
+  display         : -ms-flexbox;
+  display         : flex;
+  gap             : 1rem;
+  padding         : 0;
+  margin          : 0;
+  -webkit-box-pack: center;
+  -ms-flex-pack   : center;
+  justify-content : center;
+}
+
+@media (max-width: 768px) {
+  .header__nav-list {
+    background           : #333;
+    position             : absolute;
+    top                  : 2.1rem;
+    left                 : 0;
+    right                : 0;
+    -webkit-box-orient   : vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction   : column;
+    flex-direction       : column;
+    -webkit-transform    : translateX(0);
+    transform            : translateX(0);
+  }
+}
+
+.header__nav-item {
+  margin    : 1rem 0;
+  text-align: center;
+}
+
+.header__nav-link {
+  color             : white;
+  text-decoration   : none;
+  padding           : .5rem 1rem;
+  display           : block;
+  -webkit-transition: background-color 0.3s ease;
+  transition        : background-color 0.3s ease;
+}
+
+.header__nav-link:hover {
+  background-color: #444;
+}
+
+.header__nav--active {
+  display           : -webkit-box;
+  display           : -ms-flexbox;
+  display           : flex;
+  position          : absolute;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition        : all 0.3s ease-in-out;
+}
+
+@media (min-width: 768px) {
+  .header__nav {
+    display              : -webkit-box;
+    display              : -ms-flexbox;
+    display              : flex;
+    -webkit-box-orient   : vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction   : column;
+    flex-direction       : column;
+    -webkit-box-align    : center;
+    -ms-flex-align       : center;
+    align-items          : center;
+  }
+
+  .header__nav-item {
+    margin: 0 1rem;
+  }
+
+  .header__nav-link {
+    padding: .5rem 1rem;
+  }
+
+  .header__menu-btn {
+    display: none;
+  }
+}
+
+.hero {
+  background-image   : url("./assets/gif/hero_animation.gif");
+  background-size    : cover;
+  background-position: center;
+  position           : relative;
+  color              : white;
+  text-align         : center;
+  padding            : 20px;
+  min-height         : 100vh;
+}
+
+.hero::after {
+  content   : "";
+  position  : absolute;
+  top       : 0;
+  left      : 0;
+  width     : 100%;
+  height    : 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index   : 0;
+}
+
+.hero__container {
+  position             : relative;
+  z-index              : 1;
+  max-width            : 75rem;
+  margin               : auto;
+  display              : -webkit-box;
+  display              : -ms-flexbox;
+  display              : flex;
+  -webkit-box-orient   : vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction   : column;
+  flex-direction       : column;
+  -webkit-box-align    : center;
+  -ms-flex-align       : center;
+  align-items          : center;
+  -webkit-box-pack     : center;
+  -ms-flex-pack        : center;
+  justify-content      : center;
+  height               : 35rem;
+}
+
+@media (max-width: 768px) {
+  .hero__container {
+    height     : 35rem;
+    padding    : 1.25rem;
+    line-height: 1;
+  }
+}
+
+.hero__title {
+  font-size    : 2.5rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .hero__title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__title {
+    font-size: 1.75rem;
+  }
+}
+
+.hero__subtitle {
+  font-size    : 1.25rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .hero__subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__subtitle {
+    font-size: .875rem;
+  }
+}
+
+.hero__actions {
+  display: inline-block;
+}
+
+.hero__button {
+  background-color  : #007BFF;
+  color             : white;
+  font-weight       : bold;
+  padding           : .75rem 1.5rem;
+  text-decoration   : none;
+  border-radius     : .5rem;
+  -webkit-transition: background-color 0.3s ease;
+  transition        : background-color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .hero__button {
+    padding: .5rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__button {
+    padding: .25rem .5rem;
+  }
+}
+
+.hero__button:hover {
+  background-color: #0056b3;
+}
+
+
+.card {
+  width     : 100%;
+  height    : 15.875rem;
+  background: #0f0e17;
+  display   : flex;
+  gap       : .3125rem;
+}
+
+.card p {
+  height         : 100%;
+  flex           : 1;
+  overflow       : hidden;
+  cursor         : pointer;
+  border-radius  : .125rem;
+  transition     : all .5s;
+  background     : #0f0e17;
+  border         : 1px solid #ff5a91;
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+}
+
+.card p:hover {
+  flex: 4;
+}
+
+.card p span {
+  min-width     : 14em;
+  padding       : .5em;
+  text-align    : center;
+  transform     : rotate(-90deg);
+  transition    : all .5s;
+  text-transform: uppercase;
+  color         : #ff568e;
+  letter-spacing: .1em;
+}
+
+.card p:hover span {
+  transform: rotate(0);
+}
+
+/* Sección de planetas */
+@-webkit-keyframes zoomInOut {
+  0% {
+    -webkit-transform : scale(1);
+    transform         : scale(1);
+    -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow        : 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  50% {
+    -webkit-transform : scale(1.02);
+    transform         : scale(1.02);
+    -webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow        : 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  100% {
+    -webkit-transform : scale(1);
+    transform         : scale(1);
+    -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow        : 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@keyframes zoomInOut {
+  0% {
+    -webkit-transform : scale(1);
+    transform         : scale(1);
+    -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow        : 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  50% {
+    -webkit-transform : scale(1.02);
+    transform         : scale(1.02);
+    -webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow        : 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  100% {
+    -webkit-transform : scale(1);
+    transform         : scale(1);
+    -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow        : 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@-webkit-keyframes glow {
+
+  0%,
+  25% {
+    -webkit-filter: drop-shadow(0 4px 8px rgb(9, 231, 31));
+    filter        : drop-shadow(0 4px 8px rgb(9, 231, 31));
+  }
+
+  50% {
+    -webkit-filter: drop-shadow(0 8px 16px rgb(9, 27, 231));
+    filter        : drop-shadow(0 8px 16px rgb(9, 27, 231));
+  }
+
+  75% {
+    -webkit-filter: drop-shadow(0 4px 8px rgb(231, 9, 135));
+    filter        : drop-shadow(0 4px 8px rgb(231, 9, 135));
+  }
+
+  100% {
+    -webkit-filter: drop-shadow(0 4px 8px rgb(131, 9, 231));
+    filter        : drop-shadow(0 4px 8px rgb(131, 9, 231));
+  }
+}
+
+@keyframes glow {
+
+  0%,
+  25% {
+    -webkit-filter: drop-shadow(0 4px 8px rgb(9, 231, 31));
+    filter        : drop-shadow(0 4px 8px rgb(9, 231, 31));
+  }
+
+  50% {
+    -webkit-filter: drop-shadow(0 8px 16px rgb(9, 27, 231));
+    filter        : drop-shadow(0 8px 16px rgb(9, 27, 231));
+  }
+
+  75% {
+    -webkit-filter: drop-shadow(0 4px 8px rgb(231, 9, 135));
+    filter        : drop-shadow(0 4px 8px rgb(231, 9, 135));
+  }
+
+  100% {
+    -webkit-filter: drop-shadow(0 4px 8px rgb(131, 9, 231));
+    filter        : drop-shadow(0 4px 8px rgb(131, 9, 231));
+  }
+}
+
+.planetas {
+  padding         : 1.25rem;
+  background-color: #0f0e17;
+}
+
+.planetas__title {
+  font-size    : 2rem;
+  text-align   : center;
+  margin-bottom: 1.25rem;
+  color        : #ffffff;
+  padding      : 2rem 0;
+  line-height  : 1;
+}
+
+.planetas__list {
+  display              : -ms-grid;
+  display              : grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap                  : 1.25rem;
+}
+
+.planetas__card {
+  position          : relative;
+  background        : #0f0e17;
+  border            : .0625rem solid #ddd;
+  border-radius     : 8px;
+  overflow          : hidden;
+  -webkit-box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.1);
+  box-shadow        : 0 .25rem .5rem rgba(0, 0, 0, 0.1);
+  -webkit-transition: border-color 0.3s ease, background-color 0.3s ease, -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition        : border-color 0.3s ease, background-color 0.3s ease, -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition        : transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+  transition        : transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.3s ease, -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
+  -webkit-animation : zoomInOut 2s infinite;
+  animation         : zoomInOut 2s infinite;
+}
+
+.planetas__card:hover {
+  -webkit-transform : translateY(-0.625rem);
+  transform         : translateY(-0.625rem);
+  -webkit-box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
+  box-shadow        : 0 .5rem 1rem rgba(0, 0, 0, 0.2);
+  outline-style     : inset;
+  border-color      : #3498db #27e312 #f68f09 #ec0dd5;
+  background-color  : #fbfbfb;
+}
+
+.planetas__card:hover .planetas__name {
+  color: #0f0e17;
+}
+
+.planetas__card:hover .planetas__description {
+  font-size: 1rem;
+  color    : #434344;
+}
+
+.planetas__image {
+  width            : 100%;
+  height           : 12.5rem;
+  -o-object-fit    : scale-down;
+  object-fit       : scale-down;
+  -webkit-filter   : drop-shadow(0 .25rem .5rem rgb(9, 27, 231));
+  filter           : drop-shadow(0 .25rem .5rem rgb(9, 27, 231));
+  -webkit-animation: glow 4s infinite;
+  animation        : glow 4s infinite;
+}
+
+.planetas__content {
+  padding: 15px;
+}
+
+.planetas__name {
+  font-size    : 24px;
+  margin-bottom: .625rem;
+  color        : #fffffe;
+  text-shadow  : 0 .0625rem .125rem rgba(0, 0, 0, 0.2);
+}
+
+.planetas__description {
+  font-size: 1rem;
+  color    : #a7a9be;
+}
+
+/* Seccion de curiosidades */
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotateY(0deg);
+    transform        : rotateY(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotateY(360deg);
+    transform        : rotateY(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotateY(0deg);
+    transform        : rotateY(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotateY(360deg);
+    transform        : rotateY(360deg);
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    -webkit-transform: scale(0.95);
+    transform        : scale(0.95);
+  }
+
+  to {
+    -webkit-transform: scale(1);
+    transform        : scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    -webkit-transform: scale(0.95);
+    transform        : scale(0.95);
+  }
+
+  to {
+    -webkit-transform: scale(1);
+    transform        : scale(1);
+  }
+}
+
+.solar-system {
+  padding         : 20px;
+  background-color: #0f0e17;
+}
+
+.solar-system__title {
+  font-size    : 2em;
+  color        : #ff6347;
+  text-align   : center;
+  margin-bottom: 20px;
+}
+
+.solar-system__curiosity {
+  margin-bottom     : 20px;
+  padding           : 15px;
+  border-radius     : 10px;
+  background-color  : #0f0e17;
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow        : 0 4px 8px rgba(0, 0, 0, 0.1);
+  position          : relative;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition        : -webkit-transform 0.3s ease;
+  transition        : transform 0.3s ease;
+  transition        : transform 0.3s ease, -webkit-transform 0.3s ease;
+  display           : -webkit-box;
+  display           : -ms-flexbox;
+  display           : flex;
+  -webkit-box-pack  : start;
+  -ms-flex-pack     : start;
+  justify-content   : flex-start;
+  -webkit-box-align : center;
+  -ms-flex-align    : center;
+  align-items       : center;
+}
+
+.solar-system__curiosity img {
+  width            : 100px;
+  height           : 100px;
+  margin-right     : 20px;
+  -webkit-animation: rotate 7s linear infinite;
+  animation        : rotate 7s linear infinite;
+}
+
+.solar-system__curiosity:hover {
+  -webkit-transform: translateY(-8px);
+  transform        : translateY(-8px);
+}
+
+.solar-system__curiosity-title {
+  font-size    : 1.5em;
+  color        : #fdf901;
+  margin-bottom: 10px;
+}
+
+.solar-system__curiosity-text {
+  font-size: 1em;
+  color    : #b2b2b2;
+}
+
+.solar-system__curiosity {
+  -webkit-animation: fadeIn 2s ease-in-out;
+  animation        : fadeIn 2s ease-in-out;
+}
+
+.solar-system__curiosity:before {
+  content           : "";
+  position          : absolute;
+  top               : -10px;
+  left              : -10px;
+  right             : -10px;
+  bottom            : -10px;
+  background        : rgba(197, 141, 9, 0.2);
+  z-index           : -1;
+  border-radius     : 15px;
+  opacity           : 0;
+  -webkit-transition: opacity 0.3s ease;
+  transition        : opacity 0.3s ease;
+}
+
+.solar-system__curiosity:hover:before {
+  opacity: 1;
+}
+
+.solar-system__curiosity {
+  border            : 3px solid #fff;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow        : 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.solar-system__curiosity-title {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.solar-system__curiosity-text {
+  line-height: 1.4;
+}
