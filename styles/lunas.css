@@ -1,0 +1,279 @@
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes bounceIn {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes bounceIn {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes background {
+  0% {
+    background-color: rgba(74, 237, 98, 0.2823529412);
+  }
+  50% {
+    background-color: rgba(30, 195, 255, 0.4352941176);
+  }
+  100% {
+    background-color: rgba(227, 63, 194, 0.3764705882);
+  }
+}
+@keyframes background {
+  0% {
+    background-color: rgba(74, 237, 98, 0.2823529412);
+  }
+  50% {
+    background-color: rgba(30, 195, 255, 0.4352941176);
+  }
+  100% {
+    background-color: rgba(227, 63, 194, 0.3764705882);
+  }
+}
+@-webkit-keyframes bounceColor {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    color: #1e90ff;
+  }
+  25% {
+    -webkit-transform: translateY(-0.625rem);
+            transform: translateY(-0.625rem);
+    color: #ff4500;
+  }
+  50% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    color: #32cd32;
+  }
+  75% {
+    -webkit-transform: translateY(-0.625rem);
+            transform: translateY(-0.625rem);
+    color: #ff69b4;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    color: #1e90ff;
+  }
+}
+@keyframes bounceColor {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    color: #1e90ff;
+  }
+  25% {
+    -webkit-transform: translateY(-0.625rem);
+            transform: translateY(-0.625rem);
+    color: #ff4500;
+  }
+  50% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    color: #32cd32;
+  }
+  75% {
+    -webkit-transform: translateY(-0.625rem);
+            transform: translateY(-0.625rem);
+    color: #ff69b4;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    color: #1e90ff;
+  }
+}
+@-webkit-keyframes glow {
+  0% {
+    text-shadow: 0 0 .3125rem #1e90ff, 0 0 .625rem #1e90ff, 0 0 .9375rem #1e90ff, 0 0 1.25rem #1e90ff;
+  }
+  50% {
+    text-shadow: 0 0 .625rem #ff4500, 0 0 1.25rem #ff4500, 0 0 1.875rem #ff4500, 0 0 2.5rem #ff4500;
+  }
+  100% {
+    text-shadow: 0 0 .3125rem #1e90ff, 0 0 .625rem #1e90ff, 0 0 .9375rem #1e90ff, 0 0 1.25rem #1e90ff;
+  }
+}
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 .3125rem #1e90ff, 0 0 .625rem #1e90ff, 0 0 .9375rem #1e90ff, 0 0 1.25rem #1e90ff;
+  }
+  50% {
+    text-shadow: 0 0 .625rem #ff4500, 0 0 1.25rem #ff4500, 0 0 1.875rem #ff4500, 0 0 2.5rem #ff4500;
+  }
+  100% {
+    text-shadow: 0 0 .3125rem #1e90ff, 0 0 .625rem #1e90ff, 0 0 .9375rem #1e90ff, 0 0 1.25rem #1e90ff;
+  }
+}
+.moons {
+  max-width: 100%;
+  margin: auto;
+  padding: 2rem;
+  background-color: #0f0e17;
+  -webkit-box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.2);
+  -webkit-animation: fadeIn 2s ease-in-out;
+          animation: fadeIn 2s ease-in-out;
+}
+
+.moons__title {
+  text-align: center;
+  font-size: 2em;
+  color: #1e90ff;
+  padding: 1.25rem;
+  margin-bottom: 16px;
+  line-height: 1;
+  -webkit-animation: bounceColor 3s infinite, glow 1.5s ease-in-out infinite;
+          animation: bounceColor 3s infinite, glow 1.5s ease-in-out infinite;
+}
+
+.moons__list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1.25rem 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+@media (max-width: 48rem) {
+  .moons__list {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+.moons__item:hover {
+  -webkit-transform: translateY(-0.375rem);
+          transform: translateY(-0.375rem);
+}
+
+.moons__item:before {
+  content: "";
+  position: absolute;
+  top: -0.625rem;
+  left: -0.625rem;
+  right: -0.625rem;
+  bottom: -0.625rem;
+  background-color: #00DBDE;
+  background-image: -webkit-gradient(linear, left top, right top, from(#00DBDE), to(#FC00FF));
+  background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+  z-index: -1;
+  border-radius: .9375rem;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.moons__item:hover:before {
+  opacity: 1;
+}
+
+.moons__item {
+  border: .125rem solid #1e90ff;
+  border-radius: .5rem;
+  padding: .9375rem;
+  background-color: #e6f7ff;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  -webkit-animation: background 2s infinite linear;
+          animation: background 2s infinite linear;
+}
+.moons__item img {
+  width: 6.25rem;
+  height: 6.25rem;
+  -webkit-animation: rotate 4s infinite linear;
+          animation: rotate 4s infinite linear;
+}
+
+.moons__name {
+  font-size: 1.5em;
+  color: #ff4500;
+  -webkit-animation: fadeIn 1.5s ease-in-out;
+          animation: fadeIn 1.5s ease-in-out;
+}
+
+.moons__description {
+  font-size: 1.1em;
+}
+
+.moons__facts {
+  list-style-type: disc;
+  padding-left: 1.25rem;
+}
+
+.moons__fact {
+  margin-bottom: .3125rem;
+}
